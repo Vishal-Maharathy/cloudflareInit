@@ -26,7 +26,7 @@ export interface Env {
 }
 
 export default {
-	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello World!');
+	async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+		return Response.json({success:true, msg:"deployed through terminal!"})
 	},
 };
